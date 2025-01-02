@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Spotify Dark Mode */
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1DB954; /* Spotify Green */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar h2 {
+    font-family: 'Courier New', monospace;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    background-color: #282828; /* Slightly lighter than dark mode */
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: hidden; /* Hide the scrollbar of the content container */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px); /* Adjust height based on container padding */
+}
+
+.title {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: stretch;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Recommendations Box */
+.recommendations-box {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Beautify the scrollbar */
+.recommendations-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recommendations-box::-webkit-scrollbar-track {
+    background: #282828;
+    border-radius: 10px;
+}
+
+.recommendations-box::-webkit-scrollbar-thumb {
+    background: #1DB954; /* Spotify Green */
+    border-radius: 10px;
+    border: 2px solid #282828;
+}
+
+.recommendations-box::-webkit-scrollbar-thumb:hover {
+    background: #1ed760;
+}
+
+.recommendations-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.recommendation-item {
+    background-color: #3e3e3e; /* Even lighter than the previous color */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.recommendation-item a {
+    color: #1DB954; /* Spotify Green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recommendation-item:hover {
+    background-color: #505050;
+}
+
+/* Loading Spinner */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #1DB954; /* Spotify Green */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Container */
+.error-container {
+    text-align: center;
+}
+
+.retry-btn {
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.retry-btn:hover {
+    background-color: #1ed760;
+}
+
+/* Table Box */
+.table-box {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
