@@ -1,8 +1,8 @@
 // SpotifyLoginButton.js
 import React from 'react';
 
-const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = `${process.env.REACT_APP_BASE_URL}/auth/callback`;
+const clientId = '059e595a368946bc833b58ab426d5451';
+const redirectUri = `${process.env.REACT_APP_BASE_URL_BE_PROD}/auth/callback`;
 const scopes = ['user-read-email', 'playlist-read-private', 'user-top-read'];
 
 const SpotifyLoginButton = () => {

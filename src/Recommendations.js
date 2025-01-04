@@ -10,12 +10,12 @@ const Recommendations = () => {
 
     const fetchRecommendations = async (token) => {
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/recommendation/recommend`, {}, {
+            const response = await axios.post(`${process.env.REACT_APP_BASE_URL_BE_PROD}/recommendation/recommend`, {}, {
                 headers: {
                     'Spotify-Access-Token': token,
                 },
             });
-            console.log('response :>> ', response);
+            console.log('response :>> ', response.data.songs);
 
             setRecommendations(response.data.songs);
             setLoading(false);
@@ -29,7 +29,7 @@ const Recommendations = () => {
     useEffect(() => {
         const getToken = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/auth/get-spotify-token`, {
+                const response = await axios.get(`${process.env.REACT_APP_BASE_URL_BE_PROD}/auth/get-spotify-token`, {
                     withCredentials: true
                 });
                 console.log('response.data :>> ', response.data);
