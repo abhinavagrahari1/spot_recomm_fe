@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# about 📝
+The Spotify recommendation model uses Spotify and Groq APIs to provide personalized music suggestions. It gathers real-time data like track info and user play history from Spotify. Using content-based and popularity-based algorithms, it makes recommendations. The Groq API efficiently processes this data to ensure accuracy.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 🚀 Tech Stack
 
-In the project directory, you can run:
+- **Frontend**: React
+- **Backend**: NodeJS,Express
+- **AI/ML**: Groq API (Mixtral-8x7b-32768)
+- **Styling**: Custom CSS with modern design principles
+- **Deployment**: Vercel
 
-### `npm start`
+## 🛠️ Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+```bash
+git clone https://github.com/abhinavagrahri1/wiki_recom_fe.git
+cd wiki_recom_fe
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+```bash
+npm i
+```
 
-### `npm test`
+4. Run the application:
+```bash
+npm run start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visit `http://localhost:3000` in your browser to use the application.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 API Routes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `/`: Home page
+- `/recommendation`: Get recommended songs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤝 Contributing
 
-### `npm run eject`
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📄 License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🙏 Acknowledgments
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React](https://react.com/) for their powerful JS Framework
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Built with ❤️ by <a href="https://github.com/abhinavagrahari1">Abhinav Agrahari</a></p>
