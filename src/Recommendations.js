@@ -7,6 +7,7 @@ const Recommendations = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const fetchRecommendations = async (token) => {
         try {
@@ -15,8 +16,6 @@ const Recommendations = () => {
                     'Spotify-Access-Token': token,
                 },
             });
-            console.log('response :>> ', response.data.songs);
-
             setRecommendations(response.data.songs);
             setLoading(false);
         } catch (error) {
@@ -32,7 +31,6 @@ const Recommendations = () => {
                 const response = await axios.get(`${process.env.REACT_APP_BASE_URL_BE_PROD}/auth/get-spotify-token`, {
                     withCredentials: true
                 });
-                console.log('response.data :>> ', response.data);
                 setAccessToken(response.data.accessToken);
             } catch (error) {
                 console.error('Error fetching the token:', error);
@@ -40,13 +38,13 @@ const Recommendations = () => {
         };
 
         getToken();
-    }, []); // This useEffect runs once after initial render
+    }, []);
 
     useEffect(() => {
         if (accessToken) {
             fetchRecommendations(accessToken);
         }
-    }, [accessToken]); // This useEffect runs whenever accessToken is updated
+    }, [accessToken]);
 
     const handleRetry = () => {
         setLoading(true);
@@ -54,14 +52,23 @@ const Recommendations = () => {
         fetchRecommendations(accessToken);
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <div className="container">
-            <div className="sidebar">
-                <h2>Menu</h2>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/recommendations">Recommendations</a></li>
-                </ul>
+            <div className="sidebar-container">
+                <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/recommendations">Recommendations</a></li>
+                    </ul>
+                </div>
+                <button className="menu-btn" onClick={toggleMenu}>
+                    {isMenuOpen ? 'Close' : 'Menu'}
+                </button>
             </div>
             <div className="content">
                 <div className="title">Recommendations</div>

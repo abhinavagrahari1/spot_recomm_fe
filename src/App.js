@@ -6,12 +6,14 @@ import './App.css';
 
 const App = () => (
     <Router>
-        <div className="app-container">
-            <ConditionalLoginButton />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/recommendations" element={<Recommendations />} />
-            </Routes>
+        <div className="app-wrapper">
+            <div className="app-container">
+                <ConditionalLoginButton />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/recommendations" element={<Recommendations />} />
+                </Routes>
+            </div>
         </div>
     </Router>
 );

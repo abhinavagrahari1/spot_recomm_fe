@@ -12,6 +12,7 @@ body {
 
 .home-container {
   margin-top: 50px;
+  padding: 20px;
 }
 
 .spotify-login-btn {
@@ -28,4 +29,16 @@ body {
 .spotify-login-btn:hover {
   background-color: #1ed760;
   transform: scale(1.05);
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .spotify-login-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
