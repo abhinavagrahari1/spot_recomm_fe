@@ -1,5 +1,5 @@
 # about 📝
-The Spotify recommendation model uses Spotify and Groq APIs to provide personalized music suggestions. It gathers real-time data like track info and user play history from Spotify. Using content-based and popularity-based algorithms, it makes recommendations. The Groq API efficiently processes this data to ensure accuracy.
+The Spotify recommendation(https://react.com/) model uses Spotify and Groq APIs to provide personalized music suggestions. It gathers real-time data like track info and user play history from Spotify. Using content-based and popularity-based algorithms, it makes recommendations. The Groq API efficiently processes this data to ensure accuracy.
 
 
 ## 🚀 Tech Stack
